@@ -11,7 +11,7 @@ import Home from '../src/Pages/Home';
 function App() {
   return (
     <>
-    
+    <Home/>
     </>
   );
 }
