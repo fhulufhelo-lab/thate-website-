@@ -1,0 +1,115 @@
+/* Footer.css */
+
+.footer {
+    display: flex;
+  
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    flex-wrap: wrap;
+    height: 100%;
+    
+  }
+  
+  .footer-logo {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .footer-logo-img {
+    height: 90px; /* Adjust logo size */
+    margin-bottom: 50px;
+    border-radius: 0%;
+  }
+  
+  .footer-logo h3 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .footer-links,
+  .footer-contact,
+  .footer-hours {
+    flex: 1;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin: 10px 0;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer-links a:hover {
+    color: c; /* Change color on hover */
+  }
+  .footer-links h4{
+    font-size: 20px;
+  }
+  .footer-contact p,
+  .footer-hours p {
+    margin: 5px 0;
+  }
+  .footer-contact h4{
+    font-size: 20px;
+    
+  }
+  .footer-hours h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .hours-table th,
+  .hours-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .hours-table th {
+    background-color: #444;
+    font-weight: bold;
+  }
+  
+  .hours-table td {
+    background-color: #555;
+  }
+  .footer-copyright {
+    text-align: center; /* Center the copyright text */
+    font-size: 14px; /* Adjust font size */
+    margin-top: auto; /* Push the copyright to the bottom */
+    padding-left:42%;
+
+  }
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .footer-logo,
+    .footer-links,
+    .footer-contact,
+    .footer-hours {
+      flex: none;
+      margin-bottom: 20px;
+    }
+  }
+  

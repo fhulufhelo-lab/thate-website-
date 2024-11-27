@@ -1,0 +1,376 @@
+/* Carousel Container */
+.carousel {
+  position: relative; /* Ensure it has positioning */
+  z-index: 1; /* Lower than the nav menu */
+  width: 100%;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden;
+}
+  
+  /* Carousel Inner */
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Ensure it stays below the nav menu */
+  }
+  
+  /* Each Slide */
+  .carousel-item {
+    flex: 0 0 100%; /* Ensure each slide takes up 100% of the carousel width */
+    position: relative;
+    text-align: center;
+    height: 100%;
+  }
+  
+  /* Background Image Styling */
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the entire slide area */
+  }
+  
+  /* Content Overlay */
+  .carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90%; /* Responsive max-width */
+  }
+  
+  /* Headings and Text */
+  .carousel-content h2 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .carousel-content h3 {
+    font-size: 2rem;
+  }
+  
+  .carousel-content p {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Font Sizes */
+  @media (max-width: 768px) {
+    .carousel-content h2 {
+      font-size: 2rem;
+    }
+  
+    .carousel-content h3 {
+      font-size: 1.5rem;
+    }
+  
+    .carousel-content p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Navigation Controls Styling */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2; /* Ensure it is above the slides */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white; /* Arrow color */
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+.carousel-control.prev {
+  left: 20px;
+}
+
+.carousel-control.next {
+  right: 20px;
+}
+
+  /* Services Section Styles */
+.services {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns, each taking equal space */
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-icon {
+    font-size: 3rem;
+    color: #007bff; /* Blue icon color */
+    margin-bottom: 20px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .services-list {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium-sized screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services-list {
+      grid-template-columns: 1fr; /* 1 column on smaller screens */
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .service-card h3 {
+      font-size: 1.5rem;
+    }
+  
+    .service-card p {
+      font-size: 0.9rem;
+    }
+  }
+  /* Awards Section Styles */
+.awards {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .awards-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .award-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Align text to the left for description */
+  }
+  
+  .award-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .award-content {
+    display: flex;
+    align-items: center; /* Align items side by side */
+    gap: 20px;
+    justify-content: flex-start;
+  }
+  
+  .award-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  .award-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .award-description {
+    font-size: 1rem;
+    color: #007bff; /* Blue color for the link */
+    text-decoration: none;
+    line-height: 1.5;
+    max-width: 70%; /* Optional: Limit description width */
+  }
+  
+  .award-description:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .awards-list {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium-sized screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .awards-list {
+      grid-template-columns: 1fr; /* 1 column on smaller screens */
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .award-card h3 {
+      font-size: 1.5rem;
+    }
+  
+    .award-card p {
+      font-size: 0.9rem;
+    }
+  }
+  /* How It Works Section Styles */
+.how-it-works {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .how-it-works-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 40px;
+    padding: 0 20px;
+  }
+  
+  .step {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .step-icon {
+    font-size: 3rem;
+    color: #2313fa; /* Blue icon color */
+    margin-bottom: 20px;
+  }
+  
+  .step h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .step p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .how-it-works-steps {
+      grid-template-columns: repeat(2, 1fr); /* Two columns on medium-sized screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .how-it-works-steps {
+      grid-template-columns: 1fr; /* One column on small screens */
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .step h3 {
+      font-size: 1.5rem;
+    }
+  
+    .step p {
+      font-size: 0.9rem;
+    }
+  }
+  /* Back-to-Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #2313fa; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  /* Hide Back-to-Top Button by Default */
+  .back-to-top {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Show Back-to-Top Button when visible */
+  .back-to-top {
+    opacity: 1;
+    visibility: visible;
+  }
+  

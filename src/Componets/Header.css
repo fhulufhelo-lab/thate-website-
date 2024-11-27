@@ -1,0 +1,173 @@
+/* Main Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-bottom: white;
+    border-radius: 10px;
+    position: sticky; /* Sticky positioning */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it stays above other elements */
+    transition: all 0.3s ease; /* Smooth transition for scroll effects */
+    box-shadow: none; /* Default no shadow */
+}
+  
+.navbar-left {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    justify-content: flex-start; /* Align to the left */
+}
+  
+/* Center the logo */
+.logo {
+    height: 90px;
+    margin-right: 50px;
+    margin-left: 0; /* Reset margin for logo centering */
+}
+  
+/* Center navigation links */
+.navbar-center {
+    display: flex;
+    justify-content: center; /* Center navigation items */
+    gap: 20px;
+}
+  
+.navbar-center ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+  
+.navbar-center a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+  
+.navbar-center a:hover {
+    color: #0b028d;
+}
+
+/* Right side for the desktop (WhatsApp button) */
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+  
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 17px 29px;
+    font-size: 19px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: -35%;
+    transition: background-color 0.3s ease;
+}
+  
+.whatsapp-link {
+    text-decoration: none;
+    color: white;
+}
+  
+.whatsapp-button:hover {
+    background-color: #45a049;
+}
+  
+.whatsapp-button span {
+    margin-right: 8px;
+}
+  
+.whatsapp-button i {
+    margin-right: 5px;
+}
+  
+/* Hamburger icon (mobile only) */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    align-items: left;
+}
+  
+/* Mobile-Specific Styles */
+@media screen and (max-width: 768px) {
+    .navbar-center ul {
+        display: none;
+        align-items: left;
+    }
+
+    .navbar-center.open ul {
+        display: block;
+        position: absolute; /* Ensure it is positioned correctly */
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #ffffff;
+        padding: 50px 0 10px;
+        box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out;
+        z-index: 9999; /* Ensure it is on top */
+    }
+
+    .navbar-center ul {
+        transform: translateX(-100%);
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger */
+        position: absolute; /* Position it on the left */
+        left: 10px; /* Position from left */
+        top: 10px; /* Position from top */
+        z-index: 10000; /* Ensure hamburger icon is on top */
+    }
+
+    .navbar-left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Align to the left */
+    }
+
+    .navbar-right {
+        display: none; /* Hide WhatsApp button on mobile */
+    }
+
+    /* Center the logo on mobile */
+    .navbar-center .logo {
+        margin-bottom: 20px;
+        height: 50px;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block; /* Ensure logo is visible */
+    }
+
+    .navbar-center.open .logo {
+        display: block; /* Ensure logo is visible when the menu is open */
+    }
+}
+  
+/* Desktop Styles */
+@media screen and (min-width: 769px) {
+    .navbar-center.open ul {
+        display: flex;
+    }
+
+    /* Show logo on desktop */
+    .navbar-center .logo {
+        display: block; /* Make sure the logo is visible on desktop */
+    }
+}

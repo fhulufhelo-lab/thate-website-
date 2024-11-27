@@ -1,0 +1,186 @@
+/* Container for the entire request quote form */
+.request-quote-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.request-quote-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Make textarea taller */
+textarea {
+    height: 100px;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+}
+
+/* Submit button styling */
+.submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for responsive design */
+@media (max-width: 768px) {
+    .request-quote-container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-field {
+        margin-bottom: 10px;
+    }
+
+    input,
+    textarea,
+    select {
+        padding: 8px;
+    }
+
+    .submit-button {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Ensures proper alignment of checkbox and label */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+/* Label styling for terms and privacy policy text */
+.checkbox-container label {
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+/* Adjust the label text links for Terms and Privacy */
+.checkbox-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.checkbox-container a:hover {
+    text-decoration: underline;
+}
+
+/* Ensures the checkbox and label are aligned properly */
+.checkbox-container {
+    justify-content: flex-start;
+    gap: 10px; /* Adjust the gap between checkbox and text */
+}
+
+/* Adjust for mobile responsiveness */
+@media (max-width: 480px) {
+    .checkbox-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .checkbox-container label {
+        margin-top: 5px;
+        margin-left: -100%;
+    }
+}
+.terms{
+    margin-left: -5%;
+    font-size: 0.9rem;
+}
+/* Back-to-Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  /* Hide Back-to-Top Button by Default */
+  .back-to-top {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Show Back-to-Top Button when visible */
+  .back-to-top {
+    opacity: 1;
+    visibility: visible;
+  }

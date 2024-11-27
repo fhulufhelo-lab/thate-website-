@@ -1,0 +1,121 @@
+
+.clients-carousel {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .clients-carousel .carousel-item {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .clients-carousel .carousel-item img {
+    height: 100px;
+    max-width: 150px;
+    transition: transform 0.3s;
+  }
+  
+  .clients-carousel .carousel-item img:hover {
+    transform: scale(1.1);
+  }
+  .services-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .clients-carousel {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .clients-carousel .carousel-item img {
+    height: 100px;
+    margin: auto;
+    transition: transform 0.3s;
+  }
+  
+  .clients-carousel .carousel-item img:hover {
+    transform: scale(1.1);
+  }
+  
+  .past-projects {
+    text-align: center;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Enforce 3 columns */
+    gap: 1rem; /* Space between columns and rows */
+  }
+  
+  .project {
+    background-color: #f9f9f9; /* Optional: Adds a background to project cards */
+    padding: 1rem; /* Optional: Adds padding inside each card */
+    border-radius: 8px; /* Optional: Rounds the corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+  }
+  
+  .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .project h3 {
+    margin: 0.5rem 0;
+    color: #333;
+  }
+  
+  .project p {
+    color: #666;
+  }
+  @media (max-width: 1024px) {
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .project-grid {
+      grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+  }
+  
+
+ /* Back-to-Top Button */
+ .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  /* Hide Back-to-Top Button by Default */
+  .back-to-top {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Show Back-to-Top Button when visible */
+  .back-to-top {
+    opacity: 1;
+    visibility: visible;
+  }
