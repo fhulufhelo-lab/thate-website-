@@ -90,8 +90,8 @@ function About() {
               </p>
               <ul className="no-bullets">
                 <li><FaCheckCircle className="tick-icon" /> Registred Company</li>
-                <li><FaCheckCircle className="tick-icon" /> Fix the vat</li>
-              </ul>
+                {/* <li><FaCheckCircle className="tick-icon" /> VAT:907150187</li> */}
+              </ul> 
             </div>
             <div className="image-content">
               {/* Replace with your Google Maps embed link */}

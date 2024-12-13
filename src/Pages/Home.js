@@ -10,7 +10,9 @@ import thirdImage from "../assest/consulting.jpg"; // Another image (replace wit
 import award1 from "../assest/award1.png";
 import award2 from "../assest/award2.png";
 import award3 from "../assest/award3.png";
+
 function Home() {
+    
     const [showButton, setShowButton] = useState(false);
 
     // Handle scroll to toggle visibility of the button
